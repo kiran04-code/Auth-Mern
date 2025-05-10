@@ -23,7 +23,7 @@ const __dirname = path.resolve();
 // Serve static frontend
 app.use(express.static(path.join(__dirname, "my-app")));
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "my-app", "index.html"));
 });
 
